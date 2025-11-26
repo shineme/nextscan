@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  nextscan:
+    build:
+      context: ./web
+      dockerfile: Dockerfile
+    container_name: nextscan
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    volumes:
+      # Persist SQLite database
+      - nextscan-data:/app/data
+    environment:
+      - NODE_ENV=production
+      - DATABASE_PATH=/app/data/nextscan.db
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/api/init"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  nextscan-data:
+    driver: local

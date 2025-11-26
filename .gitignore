@@ -1,0 +1,56 @@
+# Visual Studio临时文件
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# 编译输出
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# Visual Studio代码覆盖率结果
+*.coverage
+*.coveragexml
+
+# NuGet包
+*.nupkg
+# NuGet Symbol包
+*.snupkg
+# 包文件夹
+[Pp]ackages/
+
+# Visual Studio缓存文件
+# 文件结尾为.cache可以被忽略
+*.[Cc]ache
+# 但是要保持目录存在
+!?*.[Cc]ache/
+
+# 日志文件
+*.log
+
+# Visual Studio IntelliCode
+.vsconfig
+
+# 本地历史文件
+.localhistory/
+
+# Visual Studio历史文件
+.history/
+
+# Windows临时文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
